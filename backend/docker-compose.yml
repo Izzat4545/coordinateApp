@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DB_USERNAME: postgres
+      DB_PASSWORD: MYISN085139
+      DB_NAME: coordinates
+      DB_HOST: db
+      PORT: 3000
+      NODE_ENV: development
+    depends_on:
+      - db 
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: MYISN085139
+      POSTGRES_DB: coordinates
+    # ports:
+    #   - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data 
+
+volumes:
+  postgres_data:
