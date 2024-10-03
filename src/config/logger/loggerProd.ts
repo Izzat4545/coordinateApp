@@ -1,6 +1,6 @@
 import { createLogger, format, transports } from "winston";
-import path from "path";
 import { AppModes } from "../../utils/enums/appModes";
+import path from "path";
 
 const { combine, timestamp, label, printf } = format;
 

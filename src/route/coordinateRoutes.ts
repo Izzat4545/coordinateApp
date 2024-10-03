@@ -1,8 +1,8 @@
-import { Router } from "express";
 import {
   coordinateGetController,
   coordinatePostController,
 } from "../controller/coordinateController";
+import { Router } from "express";
 
 export const authRoutes = Router();
 

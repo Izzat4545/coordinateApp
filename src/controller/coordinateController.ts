@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import { generateRandomCoordinate } from "../utils/coordinateGenerator";
 import {
   createCoordinate,
   getAllCoordinates,
 } from "../service/coordinateService";
+import { generateRandomCoordinate } from "../utils/coordinateGenerator";
 
 export const coordinateGetController = async (req: Request, res: Response) => {
   try {

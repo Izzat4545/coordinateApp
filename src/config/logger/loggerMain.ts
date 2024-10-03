@@ -1,9 +1,9 @@
-import { productionLogger } from "./loggerProd";
-import { devLogger } from "./loggerDev";
-import winston from "winston";
-import dotenv from "dotenv";
 import { AppModes } from "../../utils/enums/appModes";
+import { devLogger } from "./loggerDev";
+import dotenv from "dotenv";
 import { getEnv } from "../../utils/getEnv";
+import { productionLogger } from "./loggerProd";
+import winston from "winston";
 
 dotenv.config();
 

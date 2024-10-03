@@ -1,4 +1,4 @@
-import { DataTypes, Model, Optional } from "sequelize";
+import { DataTypes, Model } from "sequelize";
 import { sequelize } from "../config/database";
 
 interface CoordinateAttributes {
@@ -9,11 +9,8 @@ interface CoordinateAttributes {
   updatedAt?: Date;
 }
 
-interface CoordinateCreationAttributes
-  extends Optional<CoordinateAttributes, "id" | "createdAt" | "updatedAt"> {}
-
 export class CoordinateModel
-  extends Model<CoordinateAttributes, CoordinateCreationAttributes>
+  extends Model<CoordinateAttributes>
   implements CoordinateAttributes
 {
   public id!: number;

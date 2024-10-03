@@ -1,6 +1,6 @@
-import express from "express";
-import { authRoutes } from "./route/coordinateRoutes";
 import { handleErrors, handleNotFound } from "./middleware/errorHandler";
+import { authRoutes } from "./route/coordinateRoutes";
+import express from "express";
 import { requestLogger } from "./middleware/requestLogger";
 
 const app = express();

@@ -1,7 +1,7 @@
 import app from "./app";
-import { sequelize } from "./config/database";
-import { logger } from "./config/logger/loggerMain";
 import { getEnv } from "./utils/getEnv";
+import { logger } from "./config/logger/loggerMain";
+import { sequelize } from "./config/database";
 
 const PORT = getEnv("PORT");
 
