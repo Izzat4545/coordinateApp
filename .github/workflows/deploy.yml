@@ -26,4 +26,6 @@ jobs:
 
             docker compose down
 
+            docker image rm coordinateapp-app
+
             docker compose up -d
