@@ -22,6 +22,6 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd coordinateApp
-            git pull
+            git pull origin backend
             docker compose down
             docker compose up -d
