@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(requestLogger);
 
 const corsOptions = {
-  origin: ["http://devboi.site"],
+  origin: ["http://devboi.site","http://localhost:5173"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 };
