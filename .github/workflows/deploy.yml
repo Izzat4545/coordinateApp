@@ -26,6 +26,4 @@ jobs:
 
             docker compose down
 
-            docker rmi $(docker images -q --filter "dangling=true") || true
-
             docker compose up -d
