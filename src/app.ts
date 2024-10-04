@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(requestLogger);
 
 const corsOptions = {
-  origin: ["http://devboi.site","http://justme.uz"],
+  origin: ["http://devboi.site","https://justme.uz"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 };
