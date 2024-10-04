@@ -15,10 +15,9 @@ const corsOptions = {
   credentials: true,
 };
 
+app.use(handleNotFound);
+app.use(handleErrors);
 app.use(cors(corsOptions));
 app.use("/coordinates", authRoutes);
-
-app.use(handleErrors);
-app.use(handleNotFound);
 
 export default app;
