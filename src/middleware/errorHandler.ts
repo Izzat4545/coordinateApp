@@ -2,7 +2,12 @@ import { Request, Response } from "express";
 import { logger } from "../config/logger/loggerMain";
 
 // Generic error handler
-export const handleErrors = (err: Error, req: Request, res: Response) => {
+export const handleErrors = (
+  err: Error,
+  req: Request,
+  res: Response,
+  next: Function
+) => {
   logger.error(`Error occurred: ${err.message}`);
   res.status(500).send("Something broke!");
 };
