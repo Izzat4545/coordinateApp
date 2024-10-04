@@ -1,4 +1,4 @@
-import { handleErrors, handleNotFound } from "./middleware/errorHandler";
+// import { handleErrors, handleNotFound } from "./middleware/errorHandler";
 import { authRoutes } from "./route/coordinateRoutes";
 import cors from "cors";
 import express from "express";
@@ -17,7 +17,5 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use("/coordinates", authRoutes);
-app.use(handleErrors);
-app.use(handleNotFound);
 
 export default app;
