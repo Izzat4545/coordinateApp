@@ -4,13 +4,13 @@ services:
   app:
     build: .
     ports:
-      - "3000:3000"
+      - "8000:8000"
     environment:
       DB_USERNAME: postgres
       DB_PASSWORD: MYISN085139
       DB_NAME: coordinates
       DB_HOST: db
-      PORT: 3000
+      PORT: 8000
       NODE_ENV: development
     depends_on:
       - db 
