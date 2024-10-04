@@ -21,6 +21,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
+            cd coordinateApp
+            git chackout backend
             git pull
             npm install
             pm2 reload all
