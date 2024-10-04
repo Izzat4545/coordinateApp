@@ -22,7 +22,6 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd coordinateApp
-            git config --global --add safe.directory /home/automation/coordinateApp
             git checkout backend
             git pull
             npm install
