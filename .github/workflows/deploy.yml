@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+      - backend
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SECRET_KEY }}
+
+      - name: Deploy to server
+        run: |
+          ssh -p 22012 automation@devboi.site << EOF
+            cd coordinateApp
+            git checkout backend
+            git pull origin backend
+            npm install
+            pm2 restart all || pm2 start npm --name "coordinate app" -- run dev
+          EOF
